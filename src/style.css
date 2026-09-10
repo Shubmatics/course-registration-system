@@ -1,0 +1,55 @@
+:root {
+  --bg: #f7f7f7;
+  --surface: #ffffff;
+  --surface-soft: #f3f3f3;
+  --surface-strong: #111111;
+  --ink: #111111;
+  --muted: #666666;
+  --line: #ebebeb;
+  --yellow: #ffd21f;
+  --yellow-strong: #f5c400;
+  --shadow-soft: 0 10px 28px rgba(17, 17, 17, 0.06);
+  --shadow-card: 0 14px 28px rgba(17, 17, 17, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+::selection {
+  background: rgba(255, 210, 31, 0.3);
+}
