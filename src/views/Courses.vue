@@ -20,7 +20,7 @@ const route = useRoute();
 const router = useRouter();
 const animating = ref(false);
 
-// if a level is provided in the query (from quick access), use it and animate in
+
 onMounted(() => {
   if (route.query.level) {
     selectedLevel.value = String(route.query.level);
@@ -29,7 +29,7 @@ onMounted(() => {
   }
 });
 
-// keep selectedLevel and the URL query in sync
+
 watch(() => route.query.level, (val) => {
   if (val) {
     selectedLevel.value = String(val || "");
@@ -44,7 +44,7 @@ watch(selectedLevel, (val, oldVal) => {
     router.replace({ path: "/courses", query: {} });
   }
 
-  // trigger a short enter animation whenever selection changes
+
   if (val && val !== oldVal) {
     animating.value = true;
     setTimeout(() => (animating.value = false), 420);
@@ -407,7 +407,7 @@ onMounted(() => {
         </div>
 
 
-        <!-- NO COURSES -->
+        <!-- if no courses -->
         <div
           v-else-if="filteredCourses.length === 0"
           class="state-card"
@@ -428,7 +428,7 @@ onMounted(() => {
         </div>
 
 
-        <!-- COURSES -->
+        <!-- if courses exist -->
         <div
           v-else
           class="courses-grid"

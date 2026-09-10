@@ -96,7 +96,7 @@ if (!profile) {
         </div>
 
         <h1>Course Registration System</h1>
-        
+        <p>Empowering education, shaping futures</p>
 
         <div class="feature-list">
           <div>
